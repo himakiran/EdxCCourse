@@ -1,0 +1,13 @@
+NOTES
+
+gcc comple options
+
+gcc -std=c11 -Wall -fmax-errors=10 -Wextra pr.c -o pr
+
+c11 standard, -Wall all warnings -fmax-errors=10 stop fatre 10 errors -Wextra showextra warnings 
+
+if you have printf("what's ur name?") like this without newline followed by
+scanf("%s",&name);
+
+"what's ur name ?" will not be printed .. to do that we need to use
+fflush(stdout)  after  the printf statement which flushes the buffer to stdout
