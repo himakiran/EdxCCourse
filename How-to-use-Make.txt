@@ -1,0 +1,26 @@
+
+How-to-use-make for compiling
+
+1. touch Makefile   // It always has to be Makefile and no other name.
+
+2. Syntax of Makefile as below
+   target(what u wish to produce):what is needed to do so
+   -Tab->how to produce.
+
+3. Eg Makefile
+    program: program.c weather.so
+    Tab->gcc -std=c11 -Wall -fmax-errors=10 -Wextra weather.so program.c -o program
+
+    weather.so: weather.c weather.h
+    -Tab->gcc -std=c11 -Wall -fmax-errors=10 -Wextra -c weather.c -o weather.so
+
+4.  run tne cmd make on terminal 
+
+5.  Example Makefile
+    superimage: superimage.c libimage.so
+
+    -Tab->gcc -std=c11 -Wall -fmax-errors=10 -Wextra superimage.c libimage.so -o superimage
+
+    libimage.so: libimage.c libimage.h
+
+    -Tab->gcc -std=c11 -Wall -fmax-errors=10 -Wextra -c libimage.c -o libimage.so

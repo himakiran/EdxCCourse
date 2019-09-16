@@ -1,0 +1,11 @@
+create your own library and header file
+
+1. put all prototypes/declarations of your functions in say myheader.h
+
+2. put all fuction definitions in a file say mylibrary.c
+
+3. Now compile mylibrary.c to get mylibrary.so as below
+gcc -std=c11 -Wall -fmax-errors=10 -Wextra -c mylibrary.c -o mylibrary.so  // The -c flag tells gcc to compile and not build an exe.
+
+4. now you can compile your program to get and exe as follows
+gcc -std=c11 -Wall -fmax-errors=10 -Wextra mylibrary.so myprogram.c -o myprogram
